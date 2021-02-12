@@ -1,0 +1,2 @@
+# export db
+mongoexport --db=ephemera --collection=seeClickFix --type=csv --fields=_id,name,type,weight --out=seeClickFix.csv
