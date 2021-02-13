@@ -1,2 +1,4 @@
 # export db
-mongoexport --db=ephemera --collection=seeClickFix --type=csv --fields=_id,name,type,weight --out=seeClickFix.csv
+mongoexport --db=topeka --collection=seeClick --csv --fields=id,status,summary,description,lat,lng,address,created_at,acknowledged_at,closed_at,url --out=seeClickFix.csv
+scp pi@192.168.1.183:seeClick.json .
+scp benjamenalford@192.168.1.10:seeClickFix.csv .
