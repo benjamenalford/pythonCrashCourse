@@ -13,7 +13,11 @@ pies.append({
             "price": 4.99,
             "ingredients": ["crust", "apples", "TLC"]
             })
-
+pies.append({
+            "name": "pineapple pie",
+            "price": 9.98,
+            "ingredients": [" special crust", "pine", "apples", "ham"]
+            })
 total_price = 0.0
 
 for pie in pies:
