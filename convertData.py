@@ -1,5 +1,6 @@
 import csv
 file_path = "data/seeClickFix.csv"
+issue_list = []
 
 with open(file_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
@@ -14,7 +15,7 @@ with open(file_path) as csvfile:
     empty_closed_count = 0
     total_rows = 0
     status_list = []
-    issue_list = []
+
     for row in my_csv_file_reader:
         closed_at = row[csv_header.index('closed_at')]
         status = row[csv_header.index('status')]
@@ -26,4 +27,5 @@ with open(file_path) as csvfile:
 
         issue_list.append(issue)
 
-    print(issue_list[0]['summary'])
+for issue in issue_list:
+    print(issue["address"])
