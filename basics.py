@@ -21,3 +21,20 @@ pie_ingredients = []
 pies.append("cherry")
 pie_prices.append(1.99)
 pie_ingredients.append(["crust", "cherries"])
+
+pies.append("apple")
+pie_prices.append(4.99)
+pie_ingredients.append(["crust", "apples"])
+
+# print(pies)
+# print(pie_prices)
+# print(pie_ingredients)
+total_price = 0.0
+for i in range(0, len(pies)):
+    total_price = total_price + pie_prices[i]
+    print(pies[i])
+    print(pie_ingredients[i])
+
+print(total_price)
+# for pie in pies:
+#     print(pie)
