@@ -18,13 +18,21 @@ pies.append({
             "price": 9.98,
             "ingredients": [" special crust", "pine", "apples", "ham"]
             })
+pies.append({
+    "name": "plain",
+    "price": .99,
+    "ingredients": []
+})
 total_price = 0.0
+
 
 for pie in pies:
     print(pie["name"])
     print("    " + str(pie["price"]))
-    total_price = total_price + pie["price"]  # pie_prices[1]
-    for ing in pie["ingredients"]:
-        print("    " + ing)
-
+    total_price = total_price + pie["price"]
+    if (len(pie["ingredients"]) > 0):  # pie_prices[1]
+        for ing in pie["ingredients"]:
+            print("    " + ing)
+    else:
+        print("    i have none")
 print(total_price)
