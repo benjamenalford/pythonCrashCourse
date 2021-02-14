@@ -6,6 +6,22 @@ with open(file_path) as csvfile:
     my_csv_file_reader = csv.reader(csvfile)
     # Read the header row first(skip this step if there is no header)
     csv_header = next(my_csv_file_reader)
-    print(csv_header)
+    #['id', 'status', 'summary', 'description', 'lat', 'lng', 'address', 'created_at', 'acknowledged_at', 'closed_at', 'url']
+    print(csv_header)  # print the header
+    # print the index of where this column is by asking for the index from list
+    print(csv_header.index('summary'))
+
+    empty_closed_count = 0
+    total_rows = 0
     for row in my_csv_file_reader:
-        print(row)
+        closed_at = row[csv_header.index('closed_at')]
+        status = row[csv_header.index('status')]
+
+        total_rows += 1
+        if (len(closed_at) == 0):
+            empty_closed_count += 1
+            # print(status)
+
+    print("total rows: " + str(total_rows))
+    print("total empty rows: " + str(empty_closed_count) + " " +
+          str(empty_closed_count/total_rows))
