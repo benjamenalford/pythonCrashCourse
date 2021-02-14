@@ -25,7 +25,6 @@ pies.append({
 })
 total_price = 0.0
 
-
 for pie in pies:
     print(pie["name"])
     print("    " + str(pie["price"]))
